@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carrito de compras - QueCocino.cl">
+    <title>Carrito - QueCocino.cl</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.jpg">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-green-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="assets/img/logo.jpg" alt="QueCocino.cl" class="h-12 w-12 rounded-full">
+                    <h1 class="text-2xl font-bold">QueCocino.cl</h1>
+                </a>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html#inicio" class="hover:text-green-200 transition">Inicio</a>
+                <a href="index.html#productos" class="hover:text-green-200 transition">Productos</a>
+                <a href="nosotros.html" class="hover:text-green-200 transition">Nosotros</a>
+                <a href="contacto.html" class="hover:text-green-200 transition">Contacto</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="carrito.html" class="relative hover:text-green-200 transition">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span id="header-carrito-count" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+                </a>
+                <button id="menu-movil" class="md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Menú móvil -->
+        <div id="menu-movil-container" class="hidden md:hidden bg-green-700 px-4 py-2">
+            <a href="index.html#inicio" class="block py-2 hover:text-green-200 transition">Inicio</a>
+            <a href="index.html#productos" class="block py-2 hover:text-green-200 transition">Productos</a>
+            <a href="nosotros.html" class="block py-2 hover:text-green-200 transition">Nosotros</a>
+            <a href="contacto.html" class="block py-2 hover:text-green-200 transition">Contacto</a>
+            <a href="carrito.html" class="block py-2 hover:text-green-200 transition">
+                <i class="fas fa-shopping-cart mr-2"></i>Carrito
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-center mb-8 text-gray-800">Tu Carrito de Compras</h1>
+            
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <div id="carrito-items">
+                    <!-- Los items del carrito se cargarán dinámicamente -->
+                </div>
+                
+                <div id="carrito-vacio" class="text-center py-8">
+                    <i class="fas fa-shopping-cart text-6xl text-gray-300 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Tu carrito está vacío</h3>
+                    <p class="text-gray-500 mb-6">Agrega productos desde nuestra tienda para verlos aquí.</p>
+                    <a href="index.html#productos" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
+                        <i class="fas fa-arrow-left mr-2"></i>Seguir Comprando
+                    </a>
+                </div>
+                
+                <div id="carrito-con-productos" class="hidden">
+                    <div class="border-t pt-6 mt-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-lg font-semibold">Total:</span>
+                            <span id="total-carrito" class="text-xl font-bold text-green-600">$0</span>
+                        </div>
+                        
+                        <div class="flex gap-2">
+                            <button id="copiar-lista" class="flex-1 bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+                                <i class="fas fa-copy mr-2"></i>Copiar Lista
+                            </button>
+                            <button id="enviar-whatsapp" class="flex-1 bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">
+                                <i class="fab fa-whatsapp mr-2"></i>Enviar por WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">QueCocino.cl</h3>
+                    <p>Tu tienda de confianza para productos frescos y saludables.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html#inicio" class="hover:text-green-400 transition">Inicio</a></li>
+                        <li><a href="index.html#productos" class="hover:text-green-400 transition">Productos</a></li>
+                        <li><a href="nosotros.html" class="hover:text-green-400 transition">Nosotros</a></li>
+                        <li><a href="contacto.html" class="hover:text-green-400 transition">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contacto</h3>
+                    <p><i class="fas fa-phone mr-2"></i>+56 9 9753 5584</p>
+                    <p><i class="fas fa-envelope mr-2"></i>info@quecocino.cl</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" target="_blank" class="hover:text-green-400 transition"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/quecocinocl_" target="_blank" class="hover:text-green-400 transition"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="https://wa.me/+56997535584" target="_blank" class="hover:text-green-400 transition"><i class="fab fa-whatsapp text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p>&copy; 2025 QueCocino.cl. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/database.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>

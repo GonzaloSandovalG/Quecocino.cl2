@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta a QueCocino.cl. Estamos aquí para ayudarte. Envíanos un mensaje y te responderemos a la brevedad.">
+    <title>Contacto - QueCocino.cl</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.jpg">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-green-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="assets/img/logo.jpg" alt="QueCocino.cl" class="h-12 w-12 rounded-full">
+                    <h1 class="text-2xl font-bold">QueCocino.cl</h1>
+                </a>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html#inicio" class="hover:text-green-200 transition">Inicio</a>
+                <a href="index.html#productos" class="hover:text-green-200 transition">Productos</a>
+                <a href="nosotros.html" class="hover:text-green-200 transition">Nosotros</a>
+                <a href="contacto.html" class="hover:text-green-200 transition">Contacto</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="carrito.html" class="relative hover:text-green-200 transition">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span id="header-carrito-count" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+                </a>
+                <button id="menu-movil" class="md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Menú móvil -->
+        <div id="menu-movil-container" class="hidden md:hidden bg-green-700 px-4 py-2">
+            <a href="index.html#inicio" class="block py-2 hover:text-green-200 transition">Inicio</a>
+            <a href="index.html#productos" class="block py-2 hover:text-green-200 transition">Productos</a>
+            <a href="nosotros.html" class="block py-2 hover:text-green-200 transition">Nosotros</a>
+            <a href="contacto.html" class="block py-2 hover:text-green-200 transition">Contacto</a>
+            <a href="carrito.html" class="block py-2 hover:text-green-200 transition">
+                <i class="fas fa-shopping-cart mr-2"></i>Carrito
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-center mb-8 text-gray-800">Contacto</h1>
+            
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-2xl font-semibold mb-6 text-green-600">¡Hablemos!</h2>
+                <p class="text-gray-600 mb-6">
+                    ¿Tienes alguna pregunta, sugerencia o simplemente quieres saludar? Nos encanta saber de ti. Utiliza el formulario a continuación y te responderemos a la brevedad.
+                </p>
+            </div>
+
+            <!-- Formulario de Contacto -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-semibold mb-6 text-green-600">Envíanos un Mensaje</h2>
+                <form class="space-y-4">
+                    <div>
+                        <label for="nombre" class="block text-gray-700 mb-2">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 mb-2">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                    </div>
+                    <div>
+                        <label for="telefono" class="block text-gray-700 mb-2">Teléfono (Opcional)</label>
+                        <input type="tel" id="telefono" name="telefono" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <div>
+                        <label for="mensaje" class="block text-gray-700 mb-2">Tu Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-green-500" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-green-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-700 transition disabled:bg-gray-400" disabled>
+                        Enviar Mensaje (Próximamente)
+                    </button>
+                </form>
+                <p class="text-sm text-gray-500 mt-4 text-center">El formulario no está activo aún. Por favor, contáctanos directamente por WhatsApp o email.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">QueCocino.cl</h3>
+                    <p>Tu tienda de confianza para productos frescos y saludables.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html#inicio" class="hover:text-green-400 transition">Inicio</a></li>
+                        <li><a href="index.html#productos" class="hover:text-green-400 transition">Productos</a></li>
+                        <li><a href="nosotros.html" class="hover:text-green-400 transition">Nosotros</a></li>
+                        <li><a href="contacto.html" class="hover:text-green-400 transition">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contacto</h3>
+                    <p><i class="fas fa-phone mr-2"></i>+56 9 9753 5584</p>
+                    <p><i class="fas fa-envelope mr-2"></i>info@quecocino.cl</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" target="_blank" class="hover:text-green-400 transition"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/quecocinocl_" target="_blank" class="hover:text-green-400 transition"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="https://wa.me/+56997535584" target="_blank" class="hover:text-green-400 transition"><i class="fab fa-whatsapp text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p>&copy; 2025 QueCocino.cl. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menú móvil
+        document.getElementById('menu-movil').addEventListener('click', function() {
+            document.getElementById('menu-movil-container').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

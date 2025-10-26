@@ -1,0 +1,123 @@
+/* Estilos personalizados para QueCocino.cl */
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.product-card {
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.product-card:nth-child(1) { animation-delay: 0.1s; }
+.product-card:nth-child(2) { animation-delay: 0.2s; }
+.product-card:nth-child(3) { animation-delay: 0.3s; }
+.product-card:nth-child(4) { animation-delay: 0.4s; }
+.product-card:nth-child(5) { animation-delay: 0.5s; }
+.product-card:nth-child(6) { animation-delay: 0.6s; }
+.product-card:nth-child(7) { animation-delay: 0.7s; }
+.product-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* Efectos hover */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el carrito */
+.carrito-item {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #059669;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #047857;
+}
+
+/* Input de cantidad */
+.quantity-input {
+    -moz-appearance: textfield;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #carrito-container {
+        width: 90%;
+        right: 5%;
+        left: 5%;
+    }
+}
+
+/* Estilos para la lista de compras */
+.lista-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.lista-table th,
+.lista-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.lista-table th {
+    background-color: #f3f4f6;
+    font-weight: bold;
+}
+
+.lista-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Notificación de copia */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #10b981;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transform: translateX(150%);
+    transition: transform 0.3s ease;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+/* --- MODIFICACIÓN PARA EL CARRITO --- */
+/* Ajuste para que el botón del carrito no tape el contenido en desktop */
+#carrito-btn {
+    /* En desktop, lo separamos un poco del borde */
+    right: 2rem; 
+    bottom: 2rem;
+}
+
+/* En móviles, puede quedar pegado a la esquina */
+@media (max-width: 768px) {
+    #carrito-btn {
+        right: 1rem;
+        bottom: 1rem;
+    }
+}

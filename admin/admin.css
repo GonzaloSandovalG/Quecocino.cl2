@@ -1,0 +1,101 @@
+/* Estilos personalizados para el panel de administración */
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.product-row {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Efectos hover */
+.product-row:hover {
+    background-color: #f9fafb;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #059669;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #047857;
+}
+
+.btn-danger {
+    background-color: #ef4444;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #dc2626;
+}
+
+/* Notificaciones */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transform: translateX(150%);
+    transition: transform 0.3s ease;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.success {
+    background-color: #10b981;
+    color: white;
+}
+
+.notification.error {
+    background-color: #ef4444;
+    color: white;
+}
+
+.notification.warning {
+    background-color: #f59e0b;
+    color: white;
+}
+
+/* Formularios */
+.form-input {
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #059669;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+/* Tablas */
+.table-row-hover:hover {
+    background-color: #f3f4f6;
+}
+
+/* Modal */
+.modal-backdrop {
+    backdrop-filter: blur(4px);
+}
+
+/* Login */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+}
